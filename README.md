@@ -19,7 +19,7 @@ POW Block reward: 100 Coins
 
 Total POW coins: 5 Million
 
-Total POS coins: 795 Million
+Total POS coins: 1795 Million
 
 Premind Coins: 200 Million 
 

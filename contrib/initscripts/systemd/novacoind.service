@@ -1,0 +1,11 @@
+[Unit]
+Description=PutinCoin daemon serivce
+After=network.target
+
+[Service]
+Type=simple
+User=PutinCoin
+ExecStart=/opt/PutinCoin/PutinCoind
+
+[Install]
+WantedBy=multi-user.target

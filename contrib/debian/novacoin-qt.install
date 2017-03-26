@@ -1,0 +1,5 @@
+PutinCoin-qt usr/bin
+share/pixmaps/PutinCoin32.xpm usr/share/pixmaps
+share/pixmaps/PutinCoin80.xpm usr/share/pixmaps
+debian/PutinCoin-qt.desktop usr/share/applications
+debian/PutinCoin-qt.protocol usr/share/kde4/services/

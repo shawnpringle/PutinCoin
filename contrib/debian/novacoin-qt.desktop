@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PutinCoin
+Comment=PutinCoin P2P Cryptocurrency
+Comment[ru]=PutinCoin, P2P криптовалюта
+Comment[fr]=PutinCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=PutinCoin, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/PutinCoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/PutinCoin80.xpm
+MimeType=x-scheme-handler/PutinCoin;
+Categories=Office;

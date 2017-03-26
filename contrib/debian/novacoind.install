@@ -1,0 +1,2 @@
+debian/bin/PutinCoind usr/bin
+src/PutinCoind usr/lib/PutinCoin

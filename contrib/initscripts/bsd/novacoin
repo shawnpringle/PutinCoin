@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# PROVIDE: PutinCoin
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# PutinCoin_enable (bool): Set to NO by default. Set this variable to YES if you want to enable PutinCoin service.
+# PutinCoin_config (path): Set to /usr/local/etc/PutinCoin.conf by default.
+# PutinCoin_user:  The user account PutinCoin daemon runs as. It uses 'root' user by default.
+# PutinCoin_group: The group account PutinCoin daemon runs as. It uses 'wheel' group by default.
+# PutinCoin_datadir (str): Default to "/var/db/PutinCoin". Base data directory.
+
+. /etc/rc.subr
+
+name=PutinCoin
+rcvar=PutinCoin_enable
+
+: ${PutinCoin_enable:=NO}
+: ${PutinCoin_config=/usr/local/etc/PutinCoin.conf}
+: ${PutinCoin_datadir=/var/db/PutinCoin}
+: ${PutinCoin_user="root"}
+: ${PutinCoin_group="wheel"}
+
+required_files=${PutinCoin_config}
+command=/usr/local/bin/PutinCoind
+PutinCoin_chdir=${PutinCoin_datadir}
+pidfile="${PutinCoin_datadir}/PutinCoind.pid"
+stop_cmd=PutinCoin_stop
+command_args="-conf=${PutinCoin_config} -datadir=${PutinCoin_datadir} -daemon -pid=${pidfile}"
+start_precmd="${name}_prestart"
+
+PutinCoin_create_datadir()
+{
+	echo "Creating data directory"
+	eval mkdir -p ${PutinCoin_datadir}
+	[ $? -eq 0 ] && chown -R ${PutinCoin_user}:${PutinCoin_group} ${PutinCoin_datadir}
+}
+
+PutinCoin_prestart()
+{
+	if [ ! -d "${PutinCoin_datadir}/." ]; then
+		PutinCoin_create_datadir || return 1
+	fi
+}
+
+PutinCoin_requirepidfile()
+{
+	if [ ! "0`check_pidfile ${pidfile} ${command}`" -gt 1 ]; then
+		echo "${name} not running? (check $pidfile)."
+		exit 1
+	fi
+}
+
+PutinCoin_stop()
+{
+    PutinCoin_requirepidfile
+
+	echo "Stopping ${name}."
+	eval ${command} -conf=${PutinCoin_config} -datadir=${PutinCoin_datadir} stop
+	wait_for_pids ${rc_pid}
+}
+
+load_rc_config $name
+run_rc_command "$1"

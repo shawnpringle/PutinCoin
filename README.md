@@ -25,9 +25,11 @@ Premind Coins: 200 Million
 
 ****Premind Distribution**** 
 
-=> 100 Millions for Old Chain to new Chain swappers.
+=> 100 Million For Old Chain to new Chain swappers.
+=> 50 Million For New investors.
+=> 25 Million For Supporters ( Social Marketing Team).
+=> 25 Million For Development. ( Bounties, Developers, Exchanges listings, Creating online services )
 
-=> 100 Millions for new chain investors. 
 
 Max supply: 2 Billion
 

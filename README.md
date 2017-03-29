@@ -21,9 +21,9 @@ Total POW coins: 5 Million
 
 Total POS coins: 1795 Million
 
-Premind Coins: 200 Million 
+Premine Coins: 200 Million 
 
-****Premind Distribution**** 
+****Premine Distribution**** 
 
 => 100 Million For Old Chain to new Chain swappers.
 

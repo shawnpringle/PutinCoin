@@ -25,9 +25,9 @@ Premine Coins: 200 Million
 
 ****Premine Distribution**** 
 
-=> 100 Million For Old Chain to new Chain swappers.
+=> 50 Million For Old Chain to new Chain Joins.
 
-=> 50 Million For New investors.
+=> 100 Million For New investors.
 
 => 25 Million For Supporters ( Social Marketing Team).
 
@@ -46,10 +46,13 @@ RPC 20094
 
 P2P 20095
 
-Website: https://putincoin.info
+Website: https://putincoin.org
+Twitter: https://twitter.com/PutinCoinPUT
+Facebook: https://facebook.com/PutinCoinPUT
 
-Forum: 
+Block Explorer#1: http://putincoin.info:8000
+Block Explorer#2: http://explorer.putincoin.org:8080
+Block Explorer#3: http://chainz.cryptoid.info/put
+Block Explorer#4: https://poswallet.com/blockChain/put
 
-Block Explorer: 
-
-Bitcointalk thred: 
+Bitcointalk thred: https://bitcointalk.org/index.php?topic=1847881

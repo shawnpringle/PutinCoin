@@ -47,12 +47,17 @@ RPC 20094
 P2P 20095
 
 Website: https://putincoin.org
+
 Twitter: https://twitter.com/PutinCoinPUT
+
 Facebook: https://facebook.com/PutinCoinPUT
 
 Block Explorer#1: http://putincoin.info:8000
+
 Block Explorer#2: http://explorer.putincoin.org:8080
+
 Block Explorer#3: http://chainz.cryptoid.info/put
+
 Block Explorer#4: https://poswallet.com/blockChain/put
 
 Bitcointalk thred: https://bitcointalk.org/index.php?topic=1847881
